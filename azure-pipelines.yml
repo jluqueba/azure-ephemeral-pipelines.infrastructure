@@ -1,0 +1,38 @@
+# Infrastructure pipeline
+
+# This pipeline deploys a vnet, subnet, nsg and storage account as infrastructure as part of an sample workload
+
+trigger:
+- master
+
+resources:
+- repo: self
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: Build
+  displayName: Build and push stage
+  jobs:  
+  - job: Build_Linux_Ubuntu
+    displayName: Build Linux Images(s)
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: AzureCLI@2
+      displayName: Create VNet, SubsNet and NSG
+      inputs:
+        azureSubscription: 'Visual Studio Premium con MSDN (64a1a7cd-b532-4817-87c7-3a27c7ae9e1a)'
+        scriptType: 'bash'
+        scriptLocation: 'scriptPath'
+        scriptPath: 'create-vnet.sh'
+        addSpnToEnvironment: true
+    - task: AzureCLI@2
+      displayName: Create Storage Account
+      inputs:
+        azureSubscription: 'Visual Studio Premium con MSDN (64a1a7cd-b532-4817-87c7-3a27c7ae9e1a)'
+        scriptType: 'bash'
+        scriptLocation: 'scriptPath'
+        scriptPath: 'create-storage.sh'
+        addSpnToEnvironment: true    
