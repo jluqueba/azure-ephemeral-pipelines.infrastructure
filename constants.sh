@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # General
-resourceGroup=talksandpocs
+resourceGroup=netcoreconfbcn2020
 location=westeurope
 
 # VNet, SubNet and NSG
-vNetResourceGroup=talksandpocs
-vnetName=vnetworkloadsample
+vNetResourceGroup=netcoreconfbcn2020
+vnetName=vnetgeneralpurpose
 agentsSubNetName=snetagents
-nsgName=nsgvnetworkloadsample
+nsgName=nsgvnetgeneralpurpose
 
 # Storage Account
-accountName=staworkloadsample
+accountName=netcoreconfbcn2020
 containerName=netcoreconfbcn2020
