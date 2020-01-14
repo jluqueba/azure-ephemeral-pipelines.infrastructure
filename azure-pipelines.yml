@@ -16,7 +16,7 @@ stages:
   displayName: Build and push stage
   jobs:  
   - job: Build_Linux_Ubuntu
-    displayName: Build Linux Images(s)
+    displayName: Deploy Infrastrucure Resources
     pool:
       vmImage: 'ubuntu-latest'
     steps:
