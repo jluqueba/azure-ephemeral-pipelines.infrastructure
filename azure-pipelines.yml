@@ -23,7 +23,7 @@ stages:
     - task: AzureCLI@2
       displayName: Create VNet, SubsNet and NSG
       inputs:
-        azureSubscription: 'Visual Studio Premium con MSDN (64a1a7cd-b532-4817-87c7-3a27c7ae9e1a)'
+        azureSubscription: 'netcoreconfbcn2020'
         scriptType: 'bash'
         scriptLocation: 'scriptPath'
         scriptPath: 'create-vnet.sh'
@@ -31,8 +31,8 @@ stages:
     - task: AzureCLI@2
       displayName: Create Storage Account
       inputs:
-        azureSubscription: 'Visual Studio Premium con MSDN (64a1a7cd-b532-4817-87c7-3a27c7ae9e1a)'
+        azureSubscription: 'netcoreconfbcn2020'
         scriptType: 'bash'
         scriptLocation: 'scriptPath'
         scriptPath: 'create-storage.sh'
-        addSpnToEnvironment: true    
+        addSpnToEnvironment: true
