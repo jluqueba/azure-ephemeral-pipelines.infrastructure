@@ -8,8 +8,10 @@ trigger:
 resources:
 - repo: self
 
-pool:
+variables:
   azureSubscription: 'netcoreconfbcn2020-001'
+
+pool:  
   vmImage: 'ubuntu-latest'
 
 stages:
