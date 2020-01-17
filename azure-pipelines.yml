@@ -32,7 +32,7 @@ stages:
     - task: AzureCLI@2
       displayName: Create Storage Account
       inputs:
-        azureSubscription: $(azureSubscription)'
+        azureSubscription: '$(azureSubscription)'
         scriptType: 'bash'
         scriptLocation: 'scriptPath'
         scriptPath: 'create-storage.sh'
