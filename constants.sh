@@ -11,5 +11,5 @@ agentsSubNetName=snetagents
 nsgName=nsgvnetgeneralpurpose
 
 # Storage Account
-accountName=netcoreconfbcn2020
-containerName=netcoreconfbcn2020
+accountName=stageneralpurpose
+containerName=cnttestfiles
