@@ -9,7 +9,7 @@ resources:
 - repo: self
 
 variables:
-  azureSubscription: 'netcoreconfbcn2020-001'
+  azureSubscription: 'netcoreconf2020'
 
 pool:  
   vmImage: 'ubuntu-latest'
@@ -23,6 +23,14 @@ stages:
     pool:
       vmImage: 'ubuntu-latest'
     steps:
+    - task: AzureCLI@2
+      displayName: Create ACR
+      inputs:
+        azureSubscription: '$(azureSubscription)'
+        scriptType: 'bash'
+        scriptLocation: 'scriptPath'
+        scriptPath: 'create-acr.sh'
+        addSpnToEnvironment: true
     - task: AzureCLI@2
       displayName: Create VNet, SubsNet and NSG
       inputs:
