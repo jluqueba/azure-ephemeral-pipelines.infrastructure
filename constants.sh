@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # General
-resourceGroup=netcoreconf2020
+resourceGroup=owaep
 location=westeurope
 
 # ACR
