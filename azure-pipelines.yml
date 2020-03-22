@@ -9,7 +9,7 @@ resources:
 - repo: self
 
 variables:
-  azureSubscription: 'netcoreconf2020'
+  azureSubscription: 'Personal'
 
 pool:  
   vmImage: 'ubuntu-latest'
